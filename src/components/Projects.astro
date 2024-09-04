@@ -13,44 +13,36 @@ import Css from "./icons/Css.astro";
 const TAGS = {
   CSS: {
     name: "CSS",
-    class: "bg-black text-white",
     icon: Css,
   },
 
   HTML: {
     name: "HTML",
-    class: "bg-black text-white",
     icon: Html,
   },
 
   JAVASCRIPT: {
     name: "Javascript",
-    class: "bg-black text-white",
     icon: Javascript,
   },
 
   REACT: {
     name: "React js",
-    class: "bg-black text-white",
     icon: React,
   },
 
   ASTRO: {
     name: "Astro",
-    class: "bg-black text-white",
     icon: AstroIcon,
   },
 
   NextJS: {
     name: "Next js",
-    class: "bg-[#003159] text-white",
     icon: NextJS,
   },
 
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-black text-white",
-/*     class: "bg-[#003159] text-white", */
     icon: Tailwind,
   },
 };
@@ -62,7 +54,7 @@ const PROJECTS = [
     link: "https://alexanderkostiuk.github.io/Nike-clon/",
     github: "https://github.com/AlexanderKostiuk/Nike-clon",
     image: "/nike_clon_shot.webp",
-    tags: [TAGS.REACT, TAGS.TAILWIND]
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
     title: "Microsoft login",
@@ -70,28 +62,32 @@ const PROJECTS = [
     link: "https://alexanderkostiuk.github.io/Microsoft-login-clone/",
     github: "https://github.com/AlexanderKostiuk/Microsoft-login-clone",
     image: "/microsoft_login.shot.webp",
-    tags: [TAGS.REACT, TAGS.TAILWIND]
+    tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
     title: "Tienda de licores",
     description: "Front de tienda de licores",
     link: "https://alexanderkostiuk.github.io/Proyecto-web-javascript---CoderHouse/",
-    github:"https://github.com/AlexanderKostiuk/Proyecto-web-javascript---CoderHouse",
+    github:
+      "https://github.com/AlexanderKostiuk/Proyecto-web-javascript---CoderHouse",
     image: "/tienda_licores.shot.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TAILWIND]
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.TAILWIND],
   },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ title, description, link, github, image, tags }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <div class="relative flex items-center col-span-6 row-span-5 gap-8 
+            transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl 
+            md:group-hover:-translate-y-1 md:group-hover:shadow-2xl 
+            lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="projects"
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              alt={title}
+              class="object-cover object-top w-full h-56 transition duration-500 md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
             />
@@ -102,12 +98,12 @@ const PROJECTS = [
           <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
             {title}
           </h3>
-          <div class="flex flex-col flex-wrap mt-2">
+          <div class="flex-col flex-wrap mt-2">
             <ul class="flex flex-row mb-2 gap-x-2">
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`bg-black text-white flex gap-x-2 rounded-full text-xs py-1 px-2 `}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
