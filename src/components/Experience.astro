@@ -1,0 +1,64 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Proximamente",
+    title: "Programación Backend III: Testing y Escalabilidad Backend",
+    company: "CoderHouse",
+    description:
+      "",
+    link: "",
+  },
+
+  {
+    date: "02 Julio 2024 - 20 Agosto 2024",
+    title: "Programación Backend II: Diseño y Arquitectura Backend",
+    company: "CoderHouse",
+    description:
+      "Backend de un Ecommerce que contiene CRUD de usuarios y lógica de carrito de compras junto con un sistema de Autorización y Autenticación y persistencia de datos en MongoDB.",
+    link: "",
+  },
+  {
+    date: "08 Abril 2024 - 10 Junio 2024",
+    title: "Backend Avanzado I",
+    company: "CoderHouse",
+    description:
+      "En este curso simulamos el backend de un ecommerce, gestonando productos, carrito, etc. Con persistencia de datos tanto en FileSystem como en MongoDB.",
+    link: "https://www.coderhouse.com/ar/certificados/668c34fa37f7ec6f8bd0a972?lang=es",
+  },
+  {
+    date: "04 Febrero 2024 - 27 Marzo 2024",
+    title: "React Js",
+    company: "CoderHouse",
+    description:
+      "Intenté hacer un clon de la página web de Nike, haciendo una demo de sus funcionalidades",
+    link: "https://www.coderhouse.com/ar/certificados/662aec65d73f3ed7e577f209?lang=es",
+  },
+  {
+    date: "13 Noviembre 2023 - 24 Enero 2024",
+    title: "Javascript",
+    company: "CoderHouse",
+    description:
+      "En este curso hice la página web de una tienda de licores ficticia, creando su catálogo de productos, carrito y gestionando todo en la base de datos FireBase.",
+    link: "https://www.coderhouse.com/ar/certificados/65cd0b88c3b3ca2e057c4a11?lang=es",
+  },
+  {
+    date: "28 Agosto 2023 - 01 Noviembre 2023",
+    title: "Desarrollo Web",
+    company: "CoderHouse",
+    description:
+      "En este curso intenté hacer un clon de la página web de Redragon.",
+    link: "https://www.coderhouse.com/ar/certificados/655486bab4768ccfb455a4d4?lang=es",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

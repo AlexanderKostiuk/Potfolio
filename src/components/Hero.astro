@@ -1,0 +1,51 @@
+---
+const personalImageAlt = "Alexander Kostiuk";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-24"
+      src="/me_01.jpeg"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://linkedin.com/in/alexander-kostiuk"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hola, soy Alex
+  </h1>
+  <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200
+         [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+     Soy desarrollador<strong> Frontend con conocimientos en Backend</strong>.
+     Me apasiona el mundo de la programación y me encanta diseñar y desarrollar páginas web.
+     Actualmente Resido en Buenos Aires, Argentina 🇦🇷
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="https://github.com/AlexanderKostiuk">
+      <GitHubIcon />
+      Github
+    </SocialPill>
+    <SocialPill href="https://linkedin.com/in/alexander-kostiuk">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="mailto:alexander.i.kostiuk@outlook.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+  </nav>
+</div>
